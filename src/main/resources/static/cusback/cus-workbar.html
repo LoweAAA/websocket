@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>客服工作台</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="workbar-back">
+		<div class="workbar-top">
+			<!-- <a href="./cus-info.html" style="text-decoration: none;">LANOU</a> -->
+		</div>
+		<div class="workbar-left">
+			<div style="height: 50px;"></div>
+			<div class="workbar-userinfo">
+				<img src="./img/kefu.png" alt="" style="width: 60px;height: 60px;margin-top: 20px;margin-left: 20px;float: left;" onclick="aaa();">
+				<div class="workbar-userinfo-name">
+					<div style="margin-top: 26px;">Taylor</div>
+					<div style="color: #999;">客服001</div>
+				</div>
+			</div>
+			<div class="workbar-left-option">
+				<a class="workbar-left-option-son" style="background-color: rgb(54,168,255);color: white;" onclick="changeLeftOne();">当前对话</a>
+				<a class="workbar-left-option-son" onclick="changeLeftTwo();">队列信息</a>
+				<a class="workbar-left-option-son" onclick="changeLeftThree();">历史记录</a>
+			</div>
+			<div class="workbar-left-option-entity" id='cur-conversation'>
+				<!-- <div class="cur-dia-demo cur-dia">
+					<div class="cur-dia-pic-back iconfont pc"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">浙江杭州用户</div>
+						<div class="cur-dia-demo-ip">IP: 126.15.56.134</div>
+					</div>
+
+				</div>
+				<div class="cur-dia-demo">
+					<div class="cur-dia-pic-back iconfont ph"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">广东广州用户</div>
+						<div class="cur-dia-demo-ip">IP: 134.58.24.65</div>
+					</div>
+
+				</div>
+				<div class="cur-dia-demo">
+					<div class="cur-dia-pic-back iconfont pc"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">福建漳州用户</div>
+						<div class="cur-dia-demo-ip">IP: 58.57.15.124</div>
+					</div>
+
+				</div> -->
+			</div>
+			<div class="workbar-left-option-entity" style="display: none;">
+				<!-- <div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont pc"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">浙江杭州用户</div>
+						<div class="cur-dia-demo-ip">等待时长：17min</div>
+						<button class="take-in-button">接入</button>
+					</div>
+				</div>
+				<div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont ph"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">重庆用户</div>
+						<div class="cur-dia-demo-ip">等待时长：14min</div>
+						<button class="take-in-button">接入</button>
+					</div>
+				</div>
+				<div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont pc"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">广东深圳用户</div>
+						<div class="cur-dia-demo-ip">等待时长：12min</div>
+						<button class="take-in-button">接入</button>
+					</div>
+				</div>
+				<div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont pc"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">上海用户</div>
+						<div class="cur-dia-demo-ip">等待时长：7min</div>
+						<button class="take-in-button">接入</button>
+					</div>
+				</div>
+				<div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont ph"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">北京用户</div>
+						<div class="cur-dia-demo-ip">等待时长：5min</div>
+						<button class="take-in-button">接入</button>
+					</div>
+				</div>
+				<div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont pc"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">福建福州用户</div>
+						<div class="cur-dia-demo-ip">等待时长：2min</div>
+						<button class="take-in-button">接入</button>
+					</div>
+				</div> -->
+			</div>
+			<div class="workbar-left-option-entity" style="display: none;">
+				<!-- <div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont pc" style="background: rgb(186,194,193);"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">浙江温州用户</div>
+						<div class="cur-dia-demo-ip">IP: 134.15.59.15</div>
+					</div>
+				</div>
+				<div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont ph" style="background: rgb(186,194,193);"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">上海用户</div>
+						<div class="cur-dia-demo-ip">IP: 58.46.57.134</div>
+					</div>
+				</div>
+				<div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont ph" style="background: rgb(186,194,193);"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">北京用户</div>
+						<div class="cur-dia-demo-ip">IP: 78.13.13.47</div>
+					</div>
+				</div>
+				<div class="cur-dia-demo incur-dia">
+					<div class="cur-dia-pic-back iconfont pc" style="background: rgb(186,194,193);"></div>
+					<div style="float: left;">
+						<div class="cur-dia-demo-name">浙江宁波用户</div>
+						<div class="cur-dia-demo-ip">IP: 95.47.135.14</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<div id='workbar-centern' class="workbar-centern" style="z-index: -99;">
+			<!-- <div class="workbar-cen-record">
+				<h style="width: 100%;height: 50px;display: block;"></h>
+				<a class="workbar-his" style="display: block;">点击加载历史消息</a>
+			</div> -->
+
+			<div id="no-user">
+				<h style="width: 100%;height: 50px;display: block;"></h>
+				<a class="workbar-his" style="display: block;">点击左侧用户进入聊天窗口</a>
+			</div>
+
+			<div class="tools">
+				<div class="expre iconfont chat-icon"></div>
+				<div class="photo iconfont chat-icon"></div>
+				<div class="tail iconfont chat-icon"></div>
+				<div class="docu iconfont chat-icon"></div>
+			</div>
+			<textarea name="" id="te" cols="30" rows="10" class="workbar-input"></textarea>
+			<button id="send" class="workbar-sent-button">发送</button>
+		</div>
+		<div class="workbar-right">
+			<div style="height: 50px;"></div>
+			<div class="workbar-right-option">
+				<a class="workbar-right-option-son" onclick="changeRightOne();" style="background-color: rgb(54,168,255);color: white;">用户资料</a>
+				<a class="workbar-right-option-son" onclick="changeRightTwo();">快捷回复</a>
+				<a class="workbar-right-option-son" onclick="changeRightThree();">知识库</a>
+			</div>
+			<div class="workbar-right-option-entity">
+				<div class="user-info-entity-son" style="margin-left: 0;">访问信息：</div>
+				<div class="user-info-entity-son">接入渠道：桌面网站</div>
+				<div class="user-info-entity-son">IP地址：126.15.56.134</div>
+				<div class="user-info-entity-son">终端：Google Chrome</div>
+				<div class="user-info-entity-son">系统：  Windows </div>
+				<div class="user-info-entity-son" style="margin-left: 0;">用户信息：</div>
+				<div class="user-info-entity-son">姓名：-</div>
+				<div class="user-info-entity-son">来源：桌面网站</div>
+				<div class="user-info-entity-son">手机：-</div>
+				<div class="user-info-entity-son">邮箱：-</div>
+				<div class="user-info-entity-son">备注：-</div>
+			</div>
+			<div class="workbar-right-option-entity" style="padding: 0;display: none;">
+				<div class="reply-son">欢迎语</div>
+				<div class="reply-son-son">#您好！在吗？</div>
+				<div class="reply-son-son">#欢迎光临，请问有什么可以帮到您？</div>
+				<div class="reply-son-son">#亲，在吗？</div>
+				<div class="reply-son-son">#您好，很高兴为您服务！</div>
+				<div class="reply-son">结束语</div>
+				<div class="reply-son">道歉语</div>
+				<button style="position: absolute;background:rgb(0,170,236);border: none;width: 90px;height: 30px;color: white;bottom: 350px;right: 130px;cursor: pointer;">编辑</button>
+			</div>
+			<div class="workbar-right-option-entity" style="padding: 10px;display: none;">
+				<input type="text" class="workbar-search-input" placeholder="请输入关键字">
+				<button class="workbar-search-button">搜索</button>
+			</div>
+		</div>
+	</div>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/sockjs-client/0.3.4/sockjs.min.js"></script>
+    <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
+	<script src="./js/main.js"></script>
+
+	
+</body>
+</html>

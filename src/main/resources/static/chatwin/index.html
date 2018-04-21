@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>咨询窗口</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="consult-entity">
+		<div class="entity-top">
+		<div style="width: 200px;height: 100%;float: left;">
+			<img src="./img/android.png" alt="" style="top: 15px;left: 11px; position: absolute;width: 40px;z-index: 1;"  >
+			<div class="pic-back"></div>
+			<div class="kefu-pic"></div>
+			<div class="top-name">小蓝机器人</div>
+		</div>
+			<div class="change" id="quit">退出</div>
+			<div class="change" onclick="turnper();">转人工</div>
+		</div>
+		<div class="panel">
+			<div class="onclick-his">点击加载历史记录</div>
+			
+			<div class="chat-one" style="height: 60px;display: block;">
+				<div class="chat-name">小蓝机器人</div>
+				<div class="left-entity" >您好，很高兴为您服务，请输入要查询的产品型号</div>
+			</div>
+			<div class="chat-one" style="height: 60px;display: none;">
+				<div class="chat-name">客服001</div>
+				<div class="left-entity" >您好，有什么可以帮助您的吗？</div>
+			</div>
+			<div id="time" class="time"></div>
+			<!-- <div class="chat-two" style="height: 60px;">
+				<div class="right-entity">SBT47</div>
+			</div> -->
+			
+			
+		</div>
+
+		<div class="tools">
+			<div class="expre iconfont chat-icon"></div>
+			<div class="photo iconfont chat-icon" onclick="send();"></div>
+			<div class="tail iconfont chat-icon"></div>
+
+				<input style="width: 30px;overflow: hidden;height: 20px;outline: none;" class="docu iconfont chat-icon" type="file" name="pic" accept="image/gif" />
+
+		</div>
+		<textarea spellcheck="false" name="" id="te" cols="30" rows="10" class="chat-input"></textarea>
+		<div class="bottom-button">
+			<div class="send"  id="send">发送</div>
+			
+		</div>
+
+		
+		<div class="chat-right">
+			<div class="right-pic"></div>
+			<div class="right-title" >常见问题</div>
+			<div class="right-li" onclick="alert('请在左边客服页面输入您的产品型号，小蓝将为您展示该产品的常见问题、如果没有您想问的问题，请您继续提问，小蓝将从产品知识库中为您检索答案，如果小蓝的回答您不满意，您可以转人工客服继续咨询。谢谢您的使用');">如何使用小蓝</div>
+			<div class="right-li" onclick="alert('请您拨打投诉热线400-1111-1234');">如何投诉客服</div>
+			<div class="right-li" onclick="alert('我们提供了多种包年套餐供客户使用，也可针对单项升级，详情请咨询400-1111-4321');">企业购买小蓝客服套餐的流程</div>
+			<div class="right-li" onclick="alert('即将上线，敬请期待！');">有哪些客户使用了小蓝产品</div>
+		</div>
+		<div class="eva" style="z-index: 101;">
+			<div style="color:#555556;margin-top: 20px;margin-bottom: 10px;">请你对本次服务进行评价</div>
+			<img src="./img/eva.jpg" alt="" style="width: 360px;cursor: pointer;">
+			<div style="color: #faba4a;margin-top: 10px;margin-bottom: 10px;">非常满意，完美</div>
+			<button id="commit-evaluete" style="position: absolute;width: 180px;height: 30px;bottom: 20px;left: 100px;border:0; color: white;background: rgb(0,170,236);cursor: pointer;" onclick="closeeva();">提交评价</button>
+		</div>
+
+
+
+		<div class="kbques-zhedang" style="position: absolute;top: 0;left: 0;height: 100%;width: 100%;background: rgba(0,0,0,0.4);z-index: 100;display: none;"></div>
+	</div>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/sockjs-client/0.3.4/sockjs.min.js"></script>
+    <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
+	<script src="./js/main.js"></script>
+
+
+</body>
+</html>
