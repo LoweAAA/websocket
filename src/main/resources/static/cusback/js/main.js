@@ -13,7 +13,8 @@ $(document).ready(function(){
 
 
 function connect(){
-	var socket = new SockJS('http://118.25.100.232:8080/websocket/lowe');
+	// var socket = new SockJS('http://localhost:8080/lowe');
+    var socket = new SockJS('http://118.25.100.232:8080/websocket/lowe');
 	stompClient=Stomp.over(socket);
 	stompClient.connect({},function(frame){
 		stompClient.subscribe('/topic/customer', function (greeting) {

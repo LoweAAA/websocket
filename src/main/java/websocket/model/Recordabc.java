@@ -12,11 +12,31 @@ public class Recordabc {
     private String time;
     private String userip;
     private String csname;
+    private int curspeak;
+    private String text;
 
-    public Recordabc(String time, String userip, String csname) {
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public int getCurspeak() {
+        return curspeak;
+    }
+
+    public void setCurspeak(int curspeak) {
+        this.curspeak = curspeak;
+    }
+
+    public Recordabc(String time, String userip, String csname,int curspeak,String text) {
         this.time = time;
         this.userip = userip;
         this.csname = csname;
+        this.curspeak=curspeak;
+        this.text=text;
     }
     public Recordabc() {
     }
