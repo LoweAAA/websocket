@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>咨询窗口</title>
 	<link rel="stylesheet" href="./css/style.css">
+	<!-- <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
 	<div class="consult-entity">
@@ -44,7 +46,7 @@
 				<input style="width: 30px;overflow: hidden;height: 20px;outline: none;" class="docu iconfont chat-icon" type="file" name="pic" accept="image/gif" />
 
 		</div>
-		<textarea spellcheck="false" name="" id="te" cols="30" rows="10" class="chat-input"></textarea>
+		<textarea spellcheck="false" name="te" id="te" cols="30" rows="10" class="chat-input input"></textarea>
 		<div class="bottom-button">
 			<div class="send"  id="send">发送</div>
 			
@@ -72,10 +74,23 @@
 	</div>
 	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/sockjs-client/0.3.4/sockjs.min.js"></script>
     <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
 	<script src="./js/main.js"></script>
+	<script type="text/javascript" src="./js/jquery.qqFace.js"></script>
 
 
+	<script type="text/javascript">
+		$('.expre').qqFace({
+
+		id : 'facebox', 
+
+		assign:'te', 
+
+		path:'arclist/'	//表情存放的路径
+
+	});
+	</script>
 </body>
 </html>

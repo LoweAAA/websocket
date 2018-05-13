@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>客服工作台</title>
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/reset.css">
+	
 </head>
 <body>
 	<div class="workbar-back">
@@ -24,112 +26,9 @@
 				<a class="workbar-left-option-son" onclick="changeLeftTwo();">队列信息</a>
 				<a class="workbar-left-option-son" onclick="changeLeftThree();">历史记录</a>
 			</div>
-			<div class="workbar-left-option-entity" id='cur-conversation'>
-				<!-- <div class="cur-dia-demo cur-dia">
-					<div class="cur-dia-pic-back iconfont pc"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">浙江杭州用户</div>
-						<div class="cur-dia-demo-ip">IP: 126.15.56.134</div>
-					</div>
-
-				</div>
-				<div class="cur-dia-demo">
-					<div class="cur-dia-pic-back iconfont ph"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">广东广州用户</div>
-						<div class="cur-dia-demo-ip">IP: 134.58.24.65</div>
-					</div>
-
-				</div>
-				<div class="cur-dia-demo">
-					<div class="cur-dia-pic-back iconfont pc"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">福建漳州用户</div>
-						<div class="cur-dia-demo-ip">IP: 58.57.15.124</div>
-					</div>
-
-				</div> -->
-			</div>
-			<div class="workbar-left-option-entity" style="display: none;">
-				<!-- <div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont pc"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">浙江杭州用户</div>
-						<div class="cur-dia-demo-ip">等待时长：17min</div>
-						<button class="take-in-button">接入</button>
-					</div>
-				</div>
-				<div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont ph"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">重庆用户</div>
-						<div class="cur-dia-demo-ip">等待时长：14min</div>
-						<button class="take-in-button">接入</button>
-					</div>
-				</div>
-				<div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont pc"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">广东深圳用户</div>
-						<div class="cur-dia-demo-ip">等待时长：12min</div>
-						<button class="take-in-button">接入</button>
-					</div>
-				</div>
-				<div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont pc"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">上海用户</div>
-						<div class="cur-dia-demo-ip">等待时长：7min</div>
-						<button class="take-in-button">接入</button>
-					</div>
-				</div>
-				<div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont ph"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">北京用户</div>
-						<div class="cur-dia-demo-ip">等待时长：5min</div>
-						<button class="take-in-button">接入</button>
-					</div>
-				</div>
-				<div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont pc"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">福建福州用户</div>
-						<div class="cur-dia-demo-ip">等待时长：2min</div>
-						<button class="take-in-button">接入</button>
-					</div>
-				</div> -->
-			</div>
-			<div class="workbar-left-option-entity" style="display: none;">
-				<!-- <div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont pc" style="background: rgb(186,194,193);"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">浙江温州用户</div>
-						<div class="cur-dia-demo-ip">IP: 134.15.59.15</div>
-					</div>
-				</div>
-				<div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont ph" style="background: rgb(186,194,193);"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">上海用户</div>
-						<div class="cur-dia-demo-ip">IP: 58.46.57.134</div>
-					</div>
-				</div>
-				<div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont ph" style="background: rgb(186,194,193);"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">北京用户</div>
-						<div class="cur-dia-demo-ip">IP: 78.13.13.47</div>
-					</div>
-				</div>
-				<div class="cur-dia-demo incur-dia">
-					<div class="cur-dia-pic-back iconfont pc" style="background: rgb(186,194,193);"></div>
-					<div style="float: left;">
-						<div class="cur-dia-demo-name">浙江宁波用户</div>
-						<div class="cur-dia-demo-ip">IP: 95.47.135.14</div>
-					</div>
-				</div> -->
-			</div>
+			<div class="workbar-left-option-entity" id='cur-conversation'></div>
+			<div class="workbar-left-option-entity" style="display: none;"></div>
+			<div class="workbar-left-option-entity" style="display: none;"></div>
 		</div>
 		<div id='workbar-centern' class="workbar-centern" style="z-index: -99;">
 			<!-- <div class="workbar-cen-record">
@@ -189,9 +88,20 @@
 	</div>
 	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/sockjs-client/0.3.4/sockjs.min.js"></script>
     <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
 	<script src="./js/main.js"></script>
+	<script type="text/javascript" src="./js/jquery.qqFace.js"></script>
+
+	<script type="text/javascript">
+		$('.expre').qqFace({
+		id : 'facebox', 
+		assign:'te', 
+		path:'arclist/'	//表情存放的路径
+
+	});
+	</script>
 
 	
 </body>

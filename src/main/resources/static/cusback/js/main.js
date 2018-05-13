@@ -13,8 +13,8 @@ $(document).ready(function(){
 
 
 function connect(){
-	// var socket = new SockJS('http://localhost:8080/lowe');
-    var socket = new SockJS('http://118.25.100.232:8080/websocket/lowe');
+	var socket = new SockJS('http://localhost:8080/lowe');
+    // var socket = new SockJS('http://118.25.100.232:8080/websocket/lowe');
 	stompClient=Stomp.over(socket);
 	stompClient.connect({},function(frame){
 		stompClient.subscribe('/topic/customer', function (greeting) {
@@ -29,7 +29,8 @@ function connect(){
 					useradd(JSON.parse(greeting.body).ip);
 				}
 			}else{
-				leftadd(JSON.parse(greeting.body).ip,'客服001',JSON.parse(greeting.body).text);
+				var str=replace_em(JSON.parse(greeting.body).text);
+				leftadd(JSON.parse(greeting.body).ip,'客服001',str);
 			}
 			
 		});
@@ -43,7 +44,8 @@ $('#send').click(function(){
 		alert("请在对话框输入聊天内容。");
 		return;
 	}
-	rightadd($('#te').val());
+	var str=replace_em($('#te').val())
+	rightadd(str);
 
 	// $('.panel').scrollTop($('.panel').scrollHeight);
 	m[0].scrollTop=m[0].scrollHeight;
@@ -202,6 +204,21 @@ function changeLeftThree(){
 	y[1].style.display="none";
 }
 
+
+
+function replace_em(str){
+
+	str = str.replace(/\</g,'&lt;');
+
+	str = str.replace(/\>/g,'&gt;');
+
+	str = str.replace(/\n/g,'<br/>');
+
+	str = str.replace(/\[em_([0-9]*)\]/g,'<img src="arclist/$1.gif" border="0" />');
+
+	return str;
+
+}
 
 
 
