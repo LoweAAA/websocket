@@ -22,13 +22,25 @@
 				</div>
 			</div>
 			<div class="workbar-left-option">
-				<a class="workbar-left-option-son" style="background-color: rgb(54,168,255);color: white;" onclick="changeLeftOne();">当前对话</a>
-				<a class="workbar-left-option-son" onclick="changeLeftTwo();">队列信息</a>
-				<a class="workbar-left-option-son" onclick="changeLeftThree();">历史记录</a>
+				<a class="workbar-left-option-son" style="background-color: rgb(54,168,255);color: white;width: 180px;" onclick="changeLeftOne();">当前对话</a>
+				<a class="workbar-left-option-son" onclick="changeLeftTwo()" style="display: none;"></a>
+				<a class="workbar-left-option-son" onclick="changeLeftThree();" style="width: 180px;">用户资料</a>
 			</div>
 			<div class="workbar-left-option-entity" id='cur-conversation'></div>
 			<div class="workbar-left-option-entity" style="display: none;"></div>
-			<div class="workbar-left-option-entity" style="display: none;"></div>
+			<div class="workbar-left-option-entity" style="display: none;padding:20px;">
+				<div class="user-info-entity-son" style="margin-left: 0;">访问信息：</div>
+				<div class="user-info-entity-son">接入渠道：桌面网站</div>
+				<div class="user-info-entity-son">IP地址：126.15.56.134</div>
+				<div class="user-info-entity-son">终端：Google Chrome</div>
+				<div class="user-info-entity-son">系统：  Windows </div>
+				<div class="user-info-entity-son" style="margin-left: 0;">用户信息：</div>
+				<div class="user-info-entity-son">姓名：-</div>
+				<div class="user-info-entity-son">来源：桌面网站</div>
+				<div class="user-info-entity-son">手机：-</div>
+				<div class="user-info-entity-son">邮箱：-</div>
+				<div class="user-info-entity-son">备注：-</div>
+			</div>
 		</div>
 		<div id='workbar-centern' class="workbar-centern" style="z-index: -99;">
 			<!-- <div class="workbar-cen-record">
@@ -53,34 +65,35 @@
 		<div class="workbar-right">
 			<div style="height: 50px;"></div>
 			<div class="workbar-right-option">
-				<a class="workbar-right-option-son" onclick="changeRightOne();" style="background-color: rgb(54,168,255);color: white;">用户资料</a>
+				<a class="workbar-right-option-son" onclick="changeRightOne();" style="background-color: rgb(54,168,255);color: white;">问题入库</a>
 				<a class="workbar-right-option-son" onclick="changeRightTwo();">快捷回复</a>
 				<a class="workbar-right-option-son" onclick="changeRightThree();">知识库</a>
 			</div>
 			<div class="workbar-right-option-entity">
-				<div class="user-info-entity-son" style="margin-left: 0;">访问信息：</div>
-				<div class="user-info-entity-son">接入渠道：桌面网站</div>
-				<div class="user-info-entity-son">IP地址：126.15.56.134</div>
-				<div class="user-info-entity-son">终端：Google Chrome</div>
-				<div class="user-info-entity-son">系统：  Windows </div>
-				<div class="user-info-entity-son" style="margin-left: 0;">用户信息：</div>
-				<div class="user-info-entity-son">姓名：-</div>
-				<div class="user-info-entity-son">来源：桌面网站</div>
-				<div class="user-info-entity-son">手机：-</div>
-				<div class="user-info-entity-son">邮箱：-</div>
-				<div class="user-info-entity-son">备注：-</div>
+				<div class="quesinput"><div style="margin-bottom: 10px;">产品型号：</div><input class="ques" type="text"></div>
+				<div class="quesinput"><div style="margin-bottom: 10px;">问题描述：</div><input class="ques" type="text" style=""></div>
+				<div class="quesinput"><div style="margin-bottom: 10px;">问题答案：</div><input class="ques" type="text" style="height: 80px;"></div>
+				<button style="position: absolute;background:rgb(0,170,236);border: none;width: 90px;height: 30px;color: white;bottom: 200px;right: 130px;cursor: pointer;">录入</button>
+
 			</div>
 			<div class="workbar-right-option-entity" style="padding: 0;display: none;">
-				<div class="reply-son">欢迎语</div>
-				<div class="reply-son-son">#您好！在吗？</div>
-				<div class="reply-son-son">#欢迎光临，请问有什么可以帮到您？</div>
-				<div class="reply-son-son">#亲，在吗？</div>
-				<div class="reply-son-son">#您好，很高兴为您服务！</div>
-				<div class="reply-son">结束语</div>
-				<div class="reply-son">道歉语</div>
-				<button style="position: absolute;background:rgb(0,170,236);border: none;width: 90px;height: 30px;color: white;bottom: 350px;right: 130px;cursor: pointer;">编辑</button>
+				<div class="reply-son wel">欢迎语</div>
+				<div class="reply-son-son wel-son">您好！在吗？</div>
+				<div class="reply-son-son wel-son">欢迎光临，请问有什么可以帮到您？</div>
+				<div class="reply-son-son wel-son">亲，在吗？</div>
+				<div class="reply-son-son wel-son">您好，很高兴为您服务！</div>
+				<div class="reply-son end">结束语</div>
+				<div class="reply-son-son end-son" style="display: none">亲，很高兴为您服务。</div>
+				<div class="reply-son-son end-son" style="display: none">欢迎下次咨询！</div>
+				<div class="reply-son-son end-son" style="display: none">很高兴为您服务，祝您生活愉快。</div>
+				<div class="reply-son sor">道歉语</div>
+				<div class="reply-son-son sor-son" style="display: none">很抱歉，这个问题不在受理范围。</div>
+				<div class="reply-son-son sor-son" style="display: none">这个不在我们的服务范围内呢亲。</div>
+				<div class="reply-son-son sor-son" style="display: none">给您带来不愉快的体验了，不好意思。</div>
+				<button style="position: absolute;background:rgb(0,170,236);border: none;width: 90px;height: 30px;color: white;bottom: 100px;right: 130px;cursor: pointer;">编辑</button>
 			</div>
 			<div class="workbar-right-option-entity" style="padding: 10px;display: none;">
+				
 				<input type="text" class="workbar-search-input" placeholder="请输入关键字">
 				<button class="workbar-search-button">搜索</button>
 			</div>

@@ -220,6 +220,35 @@ function replace_em(str){
 
 }
 
+$('.wel').click(function(){
+	if($('.wel-son').css('display')=='none'){
+		$('.wel-son').css('display','block');
+	}else{
+		$('.wel-son').css('display','none');
+	}
+	// alert($('.web-son').css('display'));
+});
+$('.end').click(function(){
+	if($('.end-son').css('display')=='none'){
+		$('.end-son').css('display','block');
+	}else{
+		$('.end-son').css('display','none');
+	}
+	// alert($('.web-son').css('display'));
+});
+$('.sor').click(function(){
+	if($('.sor-son').css('display')=='none'){
+		$('.sor-son').css('display','block');
+	}else{
+		$('.sor-son').css('display','none');
+	}
+	// alert($('.web-son').css('display'));
+});
+$('.wel-son,.end-son,.sor-son').click(function(){
+	$('#te').val("");
+	$('#te').val($(this).text());
+});
+
 
 
 

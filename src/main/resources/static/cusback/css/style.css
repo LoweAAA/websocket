@@ -899,3 +899,19 @@ button{
 td{height: 26.4px}
 .qqFace table td img { cursor: pointer; border: 1px #fff solid; }
 .qqFace table td img:hover { border: 1px #0066cc solid; }
+
+.quesinput{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: #333;
+	font-weight: bold;
+
+}
+.ques{
+	font-weight: lighter;
+	border-radius: 4px;
+	border: 1px solid grey;
+	 width: 280px;
+	  padding: 6px 12px 6px 12px;
+	
+}
