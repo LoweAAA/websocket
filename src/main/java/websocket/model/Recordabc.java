@@ -7,6 +7,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="recordabc")
 public class Recordabc {
+
     @Id
     private int id;
     private String time;

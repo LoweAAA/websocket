@@ -5,8 +5,10 @@ package websocket.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import websocket.model.Curnow;
 import websocket.model.Recordabc;
 import websocket.service.AccountCurd;
+import websocket.service.CurnowService;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,6 +22,9 @@ public class HelloController {
 
     @Autowired
     private AccountCurd accountCurd;
+
+    @Autowired
+    private CurnowService CurnowService;
 
     @RequestMapping("/select")
     public List<Recordabc> selectAll() {
@@ -35,6 +40,11 @@ public class HelloController {
         Recordabc account = new Recordabc(currentTime,"112.1","57",0,"123");
         accountCurd.save(account);
         return "success";
+    }
+
+    @RequestMapping("/getcuruser")
+    public List<Curnow> getCurUser(){
+        return CurnowService.findAll();
     }
 
 // @RequestMapping("/delete")

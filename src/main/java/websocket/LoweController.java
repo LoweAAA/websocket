@@ -5,8 +5,10 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
+import websocket.model.Curnow;
 import websocket.model.Recordabc;
 import websocket.service.AccountCurd;
+import websocket.service.CurnowService;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,6 +21,9 @@ public class LoweController {
 
     @Autowired
     private AccountCurd accountCurd;
+
+    @Autowired
+    private CurnowService curnowService;
 
     @MessageMapping("/toclient")
     public void toclient(Message message){
@@ -41,6 +46,9 @@ public class LoweController {
             Recordabc account = new Recordabc(currentTime,message.getIp(),"客服001",0,message.getText());
             accountCurd.save(account);
         }
+        Curnow cn=new Curnow();
+        cn.setIp(message.getIp());
+        curnowService.save(cn);
         System.out.print(message.getIp());
         System.out.print(message.getText());
         simpMessagingTemplate.convertAndSend("/topic/customer",message);

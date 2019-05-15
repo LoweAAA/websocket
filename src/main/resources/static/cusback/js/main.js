@@ -8,8 +8,31 @@ var nowip;
 $(document).ready(function(){
 	
 	connect();
-
+    getcur();
 });
+
+
+
+function getcur(){
+    $.ajax({
+        type: "GET",
+        // dataType:'jsonp',
+        data:{},
+        url: "http://localhost:8080/getcuruser",
+        success: function(data){
+			$.each(data,function (i,val) {
+                useradd(val.ip);
+            })
+
+
+        },
+        error: function(){
+            // $("#logininfo").text("请求超时");
+            console.log("fail");
+            alert("请求失败");
+        },
+    });
+}
 
 
 function connect(){
