@@ -28,22 +28,14 @@ $('#send').click(function(){
 			// stompClient.send("/app/toclient",{},JSON.stringify({'ip':ip,'text':$('#te').val()}));  //测试用，发送给自己
 			stompClient.send("/app/tocustomer",{},JSON.stringify({'ip':ip,'text':$('#te').val()}));
 		}else{
-			$.ajax({
-				type: "GET",
-				// dataType:'jsonp',
-				data:{"pid":pid,"compid":compid,"q":str},
-				url: "http://localhost:44442",
-				success: function(data){
+			if($('#te').val()=="进水了怎么办"){
+				leftadd('小蓝',"请用吹风机对准下方的孔进行干燥，干燥后半小时还是无法运行请送往保修点维修。");
+				m[0].scrollTop=m[0].scrollHeight;
+			}else{
+				leftadd('小蓝',"抱歉小蓝听不懂您说的话，请转人工服务。");
+				m[0].scrollTop=m[0].scrollHeight;
+			}
 
-					leftadd('小蓝',data);
-					
-				},
-				error: function(){
-            	// $("#logininfo").text("请求超时");
-            	console.log("fail");
-            	alert("请求失败");
-            },
-        });
 		}
 	}else{
 		confirmInput(str);

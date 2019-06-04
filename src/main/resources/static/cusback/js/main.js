@@ -111,6 +111,7 @@ $('body').on('click','.cur-dia-demo',function(){
 			$(this).css('display','none');
 		}
 	});
+	$('#updateip').text('IP地址：'+nowip);
 });
 
 
