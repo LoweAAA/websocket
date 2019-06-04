@@ -65,18 +65,18 @@
 		<div class="workbar-right">
 			<div style="height: 50px;"></div>
 			<div class="workbar-right-option">
-				<a class="workbar-right-option-son" onclick="changeRightOne();" style="background-color: rgb(54,168,255);color: white;">问题入库</a>
-				<a class="workbar-right-option-son" onclick="changeRightTwo();">快捷回复</a>
-				<a class="workbar-right-option-son" onclick="changeRightThree();">知识库</a>
+				<a class="workbar-right-option-son" onclick="changeRightOne();" style="display: none"></a>
+				<a class="workbar-right-option-son" onclick="changeRightTwo();" style="width: 180px;background-color: rgb(54,168,255);color: white;">快捷回复</a>
+				<a class="workbar-right-option-son" onclick="changeRightThree();" style="width: 180px" >知识库</a>
 			</div>
-			<div class="workbar-right-option-entity">
+			<div class="workbar-right-option-entity" style="display: none">
 				<div class="quesinput"><div style="margin-bottom: 10px;">产品型号：</div><input class="ques" type="text"></div>
 				<div class="quesinput"><div style="margin-bottom: 10px;">问题描述：</div><input class="ques" type="text" style=""></div>
 				<div class="quesinput"><div style="margin-bottom: 10px;">问题答案：</div><input class="ques" type="text" style="height: 80px;"></div>
 				<button style="position: absolute;background:rgb(0,170,236);border: none;width: 90px;height: 30px;color: white;bottom: 200px;right: 130px;cursor: pointer;">录入</button>
 
 			</div>
-			<div class="workbar-right-option-entity" style="padding: 0;display: none;">
+			<div class="workbar-right-option-entity" style="padding: 0;">
 				<div class="reply-son wel">欢迎语</div>
 				<div class="reply-son-son wel-son">您好！在吗？</div>
 				<div class="reply-son-son wel-son">欢迎光临，请问有什么可以帮到您？</div>
@@ -112,8 +112,7 @@
 		id : 'facebox', 
 		assign:'te', 
 		path:'arclist/'	//表情存放的路径
-
-	});
+		});
 	</script>
 
 	
